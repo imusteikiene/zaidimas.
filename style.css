@@ -1,0 +1,25 @@
+body{
+    text-align: center;
+    background: pink;
+    color:purple;
+    font-family: 'Courier New', Courier, monospace;
+}
+h1{
+    letter-spacing: 3px;
+}
+button{
+    border-radius: 10px;
+    box-shadow: 2px 2px;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+input{
+    border-radius: 10px;
+    width: 200px;
+}
+button:hover{
+    cursor:pointer;
+    background: purple;
+    color: white;
+
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namu darbas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1 id="score">0 to 0</h1>
+        <h3>Playing to: 5</h3>
+        
+        <h1> <label for="number"></label></h1>
+
+        <h1> <input type="number" id="number" name="number" min="1" max="5"></h1>
+        
+        <button id="playerOne">Player one</button>
+        <button id="playerTwo">Player two</button>
+        <button id="reset">Reset</button>
+       
+    <script>
+        var playerOneButton = document.getElementById("playerOne");
+        var playerTwoButton = document.getElementById("playerTwo");
+        var resetButton = document.getElementById("reset");
+        var numberInput = document.getElementById("number");
+        var scoreDisplay = document.getElementById("score");
+        
+
+        var playerOneScore = 0;
+        var playerTwoScore = 0;
+        var maxScore = 5;
+
+        playerOneButton.addEventListener("click", function() {
+            if (playerOneScore < maxScore) {
+                playerOneScore += 1;
+                updateScore();
+            }
+        });
+
+        playerTwoButton.addEventListener("click", function() {
+            if (playerTwoScore < maxScore) {
+                playerTwoScore += 1;
+                updateScore();
+            }
+        });
+
+        resetButton.addEventListener("click", function() {
+            playerOneScore = 0;
+            playerTwoScore = 0;
+            updateScore();
+        });
+
+        function updateScore() {
+            scoreDisplay.textContent = playerOneScore + " to " + playerTwoScore;
+        }
+
+
+        
+    </script>
+   
+</body>
+</html>
